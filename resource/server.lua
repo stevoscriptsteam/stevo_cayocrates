@@ -74,6 +74,8 @@ end)
 
 RegisterNetEvent('stevo_cayocrates:networksync', function(action)
 
+    if not CURRENT_CRATE_DATA then return end
+
 
     if action == 'open' then 
         CURRENT_CRATE_DATA.current_owner = source
