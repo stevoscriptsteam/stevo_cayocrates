@@ -58,7 +58,7 @@ Laptop.Open = function(data) {
 
 Laptop.Close = function() {
     $(".laptop-container").fadeOut(100);
-    $.post('https://stevo_cayo/closeLaptop');
+    $.post('https://stevo_cayocrates/closeLaptop');
 }
 
 Laptop.InjectUSB = function() {
@@ -274,7 +274,7 @@ Laptop.CompleteLaunch = function() {
     
     $('#progressFill').css('background', 'linear-gradient(90deg, #4caf50, #8bc34a)');
     
-    $.post('https://stevo_cayo/crateDrop');
+    $.post('https://stevo_cayocrates/crateDrop');
     
     setTimeout(() => {
         $('#macos').fadeOut(300, function() {
@@ -289,7 +289,7 @@ Laptop.CompleteLaunch = function() {
 }
 
 Laptop.InitiateCoordinatedClose = function() {
-    $.post('https://stevo_cayo/closeLaptop');
+    $.post('https://stevo_cayocrates/closeLaptop');
     
     setTimeout(() => {
         $(".laptop-container").fadeOut(400);
