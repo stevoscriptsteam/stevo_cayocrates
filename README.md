@@ -6,7 +6,7 @@ Any player with the usb can inject and start a crate event, with configurable re
 ﻿
 - :bank: ﻿﻿﻿ Supported frameworks: ESX, QBCore & Qbox 
 - :school_satchel:  Supported inventories: All!
-- :eye:  Supported targets: ox, qb & interact
+- :eye:  Supported targets: ox
 - :speaking_head:  Locales: English, Español & Dutch
 
 
