@@ -11,6 +11,9 @@ Any player with the usb can inject and start a crate event, with configurable re
 
 
 Follow our installation guide: [Click Here](https://docs.stevoscripts.com/free-scripts/stevo_cayocrates)
+
+<img width="1368" height="913" alt="image" src="https://github.com/user-attachments/assets/3bf900b2-8c22-4886-95b2-a90e58900475" />
+
 ﻿
 > **Dependencies:**
 > <br>
