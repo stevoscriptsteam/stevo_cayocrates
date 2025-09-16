@@ -1,0 +1,100 @@
+{
+    "crate_opened" : "Ládát megnyitotta a csapat!",
+    "crate_dropping_15" : "Láda 15 másodpercen belül érkezik!",
+    "crate_dropping_10" : "Láda 10 másodpercen belül érkezik!",
+    "crate_dropping_5" : "Láda 5 másodpercen belül érkezik!",
+    
+    "computer": {
+        "player_too_far": "A játékos túl messze van a számítógéptől",
+        "too_many_interactions": "Túl sok interakció, kérlek várj",
+        "cannot_access_dead": "Eszméletlenül nem használhatod a számítógépet",
+        "need_usb": "USB eszközre van szükséged a számítógép használatához",
+        "computer_accessed": "Számítógéphez hozzáfért a játékos",
+        "computer_interface_closed": "Számítógép felület bezárva",
+        "crate_drop_cooldown": "A ládaledobás újratöltési időn van",
+        "access_computer": "[E] - Számítógép használata",
+        "computer_object_created": "Számítógép objektum létrehozva",
+        "computer_object_deleted": "Számítógép objektum törölve",
+        "computer_module_initialized": "Számítógép modul inicializálva",
+        "invalid_player_id": "Érvénytelen játékos ID a hozzáféréshez",
+        "player_not_exist": "A játékos nem létezik",
+        "player_no_usb_attempt": "%s játékos USB nélkül próbált ládát ledobni",
+        "player_rate_limited": "%s játékos korlátozva lett a kérések miatt",
+        "crate_drop_incoming_min_sec": "Ládaledobás %d perc %d másodpercen belül",
+        "crate_drop_incoming_min": "Ládaledobás %d percen belül",
+        "crate_drop_incoming_sec": "Ládaledobás %d másodpercen belül",
+        "crate_dropping_seconds": "Láda %d másodpercen belül érkezik!",
+        "crate_drop_created": "Ládaledobás sikeresen létrehozva",
+        "computer_data_requested": "%s játékos adatot kért - USB: %s, CD: %s",
+        "crate_drop_available_seconds": "Ládaledobás elérhető %d másodpercen belül",
+        "failed_remove_usb": "USB eszköz eltávolítása sikertelen",
+        "computer_server_initialized": "Szerveroldali számítógép modul inicializálva",
+        "player_too_far_computer": "%s játékos túl messze van a számítógéptől (távolság: %f)"
+    },
+    
+    "crate": {
+        "opening_crate": "Láda nyitása",
+        "crate_opened_success": "Láda sikeresen kinyitva!",
+        "crate_opening_cancelled": "Ládanyitás megszakítva",
+        "cannot_open_dead": "Eszméletlenül nem tudod kinyitni a ládát",
+        "too_far_from_crate": "Túl messze vagy a ládától",
+        "press_e_open_crate": "Nyomd meg az [E]-t a ládanyitáshoz",
+        "crate_object_created": "Láda objektum létrehozva",
+        "crate_cleaned_up": "Láda takarítva",
+        "crate_drop_created_client": "Ládaledobás kliensen létrehozva",
+        "crate_drop_created_server": "Ládaledobás szerveren létrehozva",
+        "get_away_crate": "Menj el a ládától!",
+        "crate_client_initialized": "Kliens láda modul inicializálva",
+        "crate_cleaned_up_server": "Láda szerveren takarítva",
+        "invalid_player_crate": "Érvénytelen játékos ID a ládanyitáshoz",
+        "non_existent_crate": "%s játékos nem létező ládát próbált kinyitni",
+        "already_owned_crate": "%s játékos már birtokolt ládát próbált kinyitni",
+        "player_too_far_crate": "%s játékos túl messze van a ládától (távolság: %f)",
+        "player_no_start_crate": "%s játékos megkezdés nélkül próbálta befejezni a nyitást",
+        "player_no_ownership": "%s játékos tulajdon nélkül próbálta befejezni a nyitást",
+        "opening_too_quick": "%s játékos túl gyorsan nyitotta a ládát (idő: %d, elvárt: %d)",
+        "player_started_opening": "%s játékos elkezdte nyitni a ládát",
+        "player_completed_opening": "%s játékos befejezte a nyitást",
+        "player_cancelled_opening": "%s játékos megszakította a nyitást",
+        "crate_server_initialized": "Szerver láda modul inicializálva"
+    },
+    
+    "loot": {
+        "received_items": "%d tárgy érkezett a ládából!",
+        "failed_receive_items": "Nem sikerült átvenni a tárgyakat a ládából",
+        "loot_received": "Zsákmány:",
+        "loot_item_format": "• %dx %s (%s)",
+        "player_failed_items": "%s játékosnak %d sikertelen tárgya volt",
+        "gave_item_player": "%dx %s átadva %s játékosnak (szint: %s)",
+        "failed_give_item": "Nem sikerült átadni: %dx %s %s játékosnak",
+        "updated_player_stats": "%s játékos statjai frissítve: %d láda, %d tárgy összesen"
+    },
+    
+    "security": {
+        "suspicious_activity": "Gyanús tevékenység észlelve: %s (Darab: %d)",
+        "invalid_player_entity": "Érvénytelen játékos entitás",
+        "player_vehicle_ui": "Játékos járműben, miközben a felület nyitva van",
+        "player_far_crate_active": "Játékos túl messze a ládától, de a láda aktív",
+        "player_far_computer": "Játékos túl messziről fér hozzá a számítógéphez",
+        "distance_validation_failed": "Távolság ellenőrzés sikertelen: %f > %f",
+        "contact_admin": "Gyanús tevékenység észlelve. Kérjük, keresd az adminisztrátort.",
+        "security_log_format": "[BIZTONSÁG] Játékos %s (%s) - %s - Darab: %d - Koord: %s",
+        "player_flagged": "%s játékos megjelölve gyanús tevékenység miatt: %s",
+        "too_many_suspicious": "Túl sok gyanús tevékenység",
+        "player_dropped_security": "[CAYO CRATES] Gyanús tevékenység miatt megjelöltek. Lépj kapcsolatba adminnal.",
+        "suspicious_activity_reported": "Gyanús tevékenység jelentve %s játékosnál: %s"
+    },
+    
+    "ui": {
+        "usb_injected": "USB eszköz behelyezve",
+        "usb_ejected": "USB eszköz eltávolítva",
+        "ui_opened": "Felület megnyitva",
+        "ui_closed": "Felület bezárva"
+    },
+    
+    "database": {
+        "database_disabled": "Adatbázis letiltva a konfigurációban",
+        "tables_created": "Adatbázis táblák létrehozva",
+        "database_initialized": "Adatbázis modul inicializálva"
+    }
+}

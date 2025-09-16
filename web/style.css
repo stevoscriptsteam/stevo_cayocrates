@@ -2,37 +2,145 @@ body {
     font-family: 'Bebas Neue', sans-serif; 
     color: white;
     margin: 0;
+    background-image: url('background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.laptop-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.laptop-container .laptop {
+    pointer-events: all;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
 }
 
 .laptop {
     display: none;
     position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    height: 80vh;
+    max-width: 1200px;
+    max-height: 800px;
+    min-width: 800px;
+    min-height: 600px;
     background-image: url('laptop.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100%;
+    background-position: center;
+    border-radius: 15px;
+    overflow: hidden;
+    /* Ensure rounded corners are preserved */
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    /* Force clipping to rounded corners */
+    clip-path: inset(0 round 15px);
+    /* Create new stacking context */
+    isolation: isolate;
+}
+
+.laptop::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 2px,
+            rgba(0, 0, 0, 0.03) 2px,
+            rgba(0, 0, 0, 0.03) 4px
+        );
+    pointer-events: none;
+    z-index: 1;
+}
+
+.laptop::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 30%, rgba(33, 150, 243, 0.03) 0%, transparent 70%);
+    animation: screenGlow 4s ease-in-out infinite alternate;
+    pointer-events: none;
+    z-index: 0;
+    border-radius: 15px;
+}
+
+@keyframes screenGlow {
+    0% { opacity: 0.3; transform: rotate(0deg) scale(0.95); }
+    100% { opacity: 0.1; transform: rotate(5deg) scale(1); }
 }
 
 
 .notifications {
     position: absolute;
-    top: 2vh;
-    right: 2vh;
+    top: 4vh;
+    right: 4vh;
     display: flex;
     flex-direction: column;
     gap: 1vh;
+    z-index: 50;
+    /* Ensure notifications stay within rounded bounds */
+    max-width: calc(100% - 8vh);
+    max-height: calc(100% - 8vh);
 }
 
 .notification {
-    background-color: rgb(17, 73, 124); 
-    color: rgb(34, 139, 230); 
-    padding: 10px 15px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(135deg, rgba(21, 101, 192, 0.95), rgba(13, 71, 161, 0.95));
+    color: #e3f2fd;
+    padding: 12px 18px;
+    border-radius: 8px;
+    border: 1px solid rgba(33, 150, 243, 0.4);
+    box-shadow: 
+        0 8px 25px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        0 0 15px rgba(33, 150, 243, 0.2);
     font-size: 2vh;
     font-family: 'Bebas Neue', sans-serif; 
-    transition: opacity 0.5s ease-in-out;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.notification::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #2196f3, #03a9f4, #00bcd4);
+    animation: notificationGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes notificationGlow {
+    0% { opacity: 0.5; transform: scaleX(0.8); }
+    100% { opacity: 1; transform: scaleX(1); }
 }
 
 .applications {
@@ -42,6 +150,93 @@ body {
     display: flex;
     flex-direction: column;
     gap: 2vh;
+    z-index: 10;
+    /* Ensure content stays within bounds */
+    max-height: calc(100% - 20vh);
+    overflow: hidden;
+}
+
+.desktop-apps {
+    position: absolute;
+    top: 8vh;
+    left: 5vh;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    z-index: 10;
+    /* Ensure content stays within bounds */
+    max-height: calc(100% - 16vh);
+    overflow: hidden;
+}
+
+.desktop-app {
+    width: 10vh;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    background: linear-gradient(145deg, rgba(26, 72, 112, 0.8), rgba(15, 58, 95, 0.8));
+    color: #4fc3f7;
+    border-radius: 8px;
+    padding: 1vh;
+    font-family: 'Bebas Neue', sans-serif;
+    border: 1px solid rgba(79, 195, 247, 0.3);
+    box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+}
+
+.desktop-app::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.desktop-app:hover {
+    background: linear-gradient(145deg, rgba(33, 150, 243, 0.9), rgba(25, 118, 210, 0.9));
+    box-shadow: 
+        0 6px 12px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.3),
+        0 0 20px rgba(33, 150, 243, 0.3);
+    transform: translateY(-2px);
+    color: white;
+}
+
+.desktop-app:hover::before {
+    left: 100%;
+}
+
+.desktop-app:active {
+    transform: translateY(0px);
+    box-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(0, 0, 0, 0.1),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.desktop-app i {
+    font-size: 4vh;
+    margin-bottom: 0.5vh;
+}
+
+.desktop-app p {
+    margin: 0;
+    font-size: 1.8vh;
+    line-height: 1.2;
 }
 
 .app-icon {
@@ -53,16 +248,53 @@ body {
     justify-content: center;
     text-align: center;
     cursor: pointer;
-    background-color: rgb(17, 73, 124); 
-    color: rgb(34, 139, 230); 
-    border-radius: 1vh;
+    background: linear-gradient(145deg, #1a4870, #0f3a5f);
+    color: #4fc3f7; 
+    border-radius: 8px;
     padding: 1vh;
-    transition: background-color 0.3s;
-    font-family: 'Bebas Neue', sans-serif; 
+    font-family: 'Bebas Neue', sans-serif;
+    border: 1px solid rgba(79, 195, 247, 0.3);
+    box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.app-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
 }
 
 .app-icon:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background: linear-gradient(145deg, #2196f3, #1976d2);
+    box-shadow: 
+        0 6px 12px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.3),
+        0 0 20px rgba(33, 150, 243, 0.3);
+    transform: translateY(-2px);
+    color: white;
+}
+
+.app-icon:hover::before {
+    left: 100%;
+}
+
+.app-icon:active {
+    transform: translateY(0px);
+    box-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(0, 0, 0, 0.1),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .app-icon i {
@@ -76,14 +308,61 @@ body {
 
 .bottombar {
     bottom: 0;
-    position: fixed;
-    background-color: black;
+    position: absolute;
+    background: linear-gradient(145deg, #1a1a1a, #000000);
     height: 5vh;
     width: 100%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
 }
 
 .bottombar div {
     display: inline-block;
+}
+
+.taskbar-items {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 20px;
+    flex: 1;
+}
+
+.taskbar-item {
+    background: linear-gradient(145deg, #2a2d35, #1e2127);
+    border: 1px solid rgba(79, 195, 247, 0.3);
+    border-radius: 6px;
+    padding: 4px 12px;
+    color: #4fc3f7;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4vh;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.taskbar-item:hover {
+    background: linear-gradient(145deg, #2196f3, #1976d2);
+    color: white;
+    box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.4),
+        0 0 10px rgba(33, 150, 243, 0.3);
+    transform: translateY(-1px);
+}
+
+.taskbar-item.active {
+    background: linear-gradient(145deg, #2196f3, #1565c0);
+    color: white;
+    box-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(0, 0, 0, 0.2);
 }
 
 .home-icon {
@@ -122,26 +401,53 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 15;
 }
 
 
 .macos-box {
-    background-color: rgb(37, 38, 44);
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    width: 500px;
-    height: 200px;
+    background: linear-gradient(145deg, #1a1d23, #0f1419);
+    border-radius: 15px;
+    width: 750px;
+    height: 500px;
     overflow: hidden;
-    border: 1px solid rgb(37, 38, 44);
+    border: 1px solid rgba(79, 195, 247, 0.3);
+    backdrop-filter: blur(20px);
+    position: relative;
+}
+
+.macos-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 30% 30%, rgba(33, 150, 243, 0.08), transparent 70%),
+        linear-gradient(135deg, rgba(0, 255, 127, 0.02), rgba(255, 0, 127, 0.02));
+    pointer-events: none;
 }
 
 .macos-box-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 8px;
-    background-color: rgb(37, 38, 44);
-    border-bottom: 3px solid rgb(23, 24, 27);
+    padding: 10px 16px;
+    gap: 10px;
+    background: linear-gradient(145deg, #363940, #2a2d35);
+    border-bottom: 2px solid rgba(23, 24, 27, 0.8);
+    position: relative;
+}
+
+.macos-box-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(79, 195, 247, 0.3), transparent);
 }
 
 .macos-title {
@@ -150,39 +456,243 @@ body {
 }
 
 .macos-close-btn {
-    font-size: 2vh;
-    padding: 0.3vh 0.4vh;
-    background-color: rgb(145, 29, 29);
-    color: rgb(243, 116, 116);
-    border: none;
-    border-radius: 3px;
+    font-size: 1.8vh;
+    padding: 8px 12px;
+    background: linear-gradient(145deg, #d32f2f, #b71c1c);
+    color: #ffebee;
+    border: 1px solid rgba(244, 67, 54, 0.3);
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s;
     font-family: 'Bebas Neue', sans-serif;
+    box-shadow: 
+        0 3px 6px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.macos-close-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.3s ease;
 }
 
 .macos-close-btn:hover {
-    background-color: rgb(184, 59, 59);
+    background: linear-gradient(145deg, #f44336, #d32f2f);
+    box-shadow: 
+        0 6px 12px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2),
+        0 0 15px rgba(244, 67, 54, 0.4);
+    transform: translateY(-1px);
+    color: white;
+}
+
+.macos-close-btn:hover::before {
+    left: 100%;
+}
+
+.macos-close-btn:active {
+    transform: translateY(0px);
+    box-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(0, 0, 0, 0.1);
 }
 
 .macos-box-content {
-    padding: 30px;
+    padding: 30px 40px;
+    text-align: left;
+    height: calc(100% - 60px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.crate-info {
+    background: rgba(33, 150, 243, 0.1);
+    border: 1px solid rgba(33, 150, 243, 0.3);
+    border-radius: 8px;
+    padding: 15px;
+    font-family: 'Lato', sans-serif;
+}
+
+.crate-info h3 {
+    margin: 0 0 10px 0;
+    color: #4fc3f7;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.2vh;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.crate-info p {
+    margin: 5px 0;
+    color: #e3f2fd;
+    font-size: 1.4vh;
+    line-height: 1.4;
+}
+
+.crate-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 12px;
+    margin-top: 10px;
+}
+
+.status-item {
     text-align: center;
+    flex: 1;
+}
+
+.status-label {
+    font-size: 1.2vh;
+    color: #90a4ae;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-value {
+    font-size: 1.6vh;
+    color: #4fc3f7;
+    font-weight: bold;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.launch-section {
+    margin-top: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+}
+
+.progress-container {
+    display: none;
+    width: 100%;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #4fc3f7, #2196f3);
+    width: 0%;
+    transition: width 0.3s ease;
+    position: relative;
+}
+
+.progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: progressShine 2s infinite;
+}
+
+@keyframes progressShine {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.launch-status {
+    margin-top: 10px;
+    font-size: 1.4vh;
+    color: #4fc3f7;
+    font-family: 'Lato', sans-serif;
 }
 
 
 #launchCrateBtn {
-    font-size: 2vh;
-    padding: 1vh 2vh;
-    background-color: rgb(145, 29, 29);
-    color: rgb(243, 116, 116);
-    border: none;
-    border-radius: 5px;
+    font-size: 2.2vh;
+    padding: 18px 40px;
+    background: linear-gradient(145deg, #d32f2f, #b71c1c);
+    color: #ffebee;
+    border: 2px solid rgba(244, 67, 54, 0.4);
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s;
-    font-family: 'Bebas Neue', sans-serif; 
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 350px;
+    white-space: nowrap;
 }
 
+#launchCrateBtn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+
+
 #launchCrateBtn:hover {
-    background-color: rgb(184, 59, 59);
+    background: linear-gradient(145deg, #f44336, #d32f2f);
+    transform: translateY(-2px);
+    color: white;
+    border-color: rgba(244, 67, 54, 0.6);
+}
+
+#launchCrateBtn:hover::before {
+    left: 100%;
+}
+
+#launchCrateBtn:hover i {
+    animation: rocketPulse 0.5s ease-in-out;
+}
+
+#launchCrateBtn:active {
+    transform: translateY(0px);
+    box-shadow: 
+        0 3px 8px rgba(0, 0, 0, 0.5),
+        inset 0 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+@keyframes rocketPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+#launchCrateBtn i {
+    font-size: 2vh;
+    flex-shrink: 0;
+}
+
+#launchCrateBtn span {
+    flex-shrink: 0;
 }

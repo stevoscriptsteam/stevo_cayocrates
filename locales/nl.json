@@ -1,0 +1,100 @@
+{
+    "crate_opened" : "Kist geopend door team!",
+    "crate_dropping_15" : "Kist dropt over 15 seconden!",
+    "crate_dropping_10" : "Kist dropt over 10 seconden!",
+    "crate_dropping_5" : "Kist dropt over 5 seconden!",
+    
+    "computer": {
+        "player_too_far": "Speler te ver van de computer",
+        "too_many_interactions": "Te veel interacties, even geduld",
+        "cannot_access_dead": "Je kunt de computer niet gebruiken terwijl je neer bent",
+        "need_usb": "Je hebt een USB-apparaat nodig voor deze computer",
+        "computer_accessed": "Computer benaderd door speler",
+        "computer_interface_closed": "Computerinterface gesloten",
+        "crate_drop_cooldown": "Kistdrop heeft afkoeltijd",
+        "access_computer": "[E] - Computer gebruiken",
+        "computer_object_created": "Computerobject aangemaakt",
+        "computer_object_deleted": "Computerobject verwijderd",
+        "computer_module_initialized": "Computermodule geïnitialiseerd",
+        "invalid_player_id": "Ongeldige speler-ID voor computergebruik",
+        "player_not_exist": "Speler bestaat niet",
+        "player_no_usb_attempt": "Speler %s probeerde kistdrop zonder USB",
+        "player_rate_limited": "Speler %s is gelimiteerd voor aanvragen",
+        "crate_drop_incoming_min_sec": "Kistdrop over %d minuten %d seconden",
+        "crate_drop_incoming_min": "Kistdrop over %d minuten",
+        "crate_drop_incoming_sec": "Kistdrop over %d seconden",
+        "crate_dropping_seconds": "Kist dropt over %d seconden!",
+        "crate_drop_created": "Kistdrop succesvol aangemaakt",
+        "computer_data_requested": "Computerdata opgevraagd door %s - USB: %s, CD: %s",
+        "crate_drop_available_seconds": "Kistdrop beschikbaar over %d seconden",
+        "failed_remove_usb": "USB-apparaat verwijderen mislukt",
+        "computer_server_initialized": "Computer servermodule geïnitialiseerd",
+        "player_too_far_computer": "Speler %s te ver van computer (afstand: %f)"
+    },
+    
+    "crate": {
+        "opening_crate": "Kist openen",
+        "crate_opened_success": "Kist succesvol geopend!",
+        "crate_opening_cancelled": "Openen van kist geannuleerd",
+        "cannot_open_dead": "Je kunt de kist niet openen terwijl je neer bent",
+        "too_far_from_crate": "Je bent te ver van de kist",
+        "press_e_open_crate": "Druk op [E] om kist te openen",
+        "crate_object_created": "Kistobject aangemaakt",
+        "crate_cleaned_up": "Kist opgeruimd",
+        "crate_drop_created_client": "Kistdrop aan clientkant aangemaakt",
+        "crate_drop_created_server": "Kistdrop aan serverkant aangemaakt",
+        "get_away_crate": "Ga weg van de kist!",
+        "crate_client_initialized": "Client kistmodule geïnitialiseerd",
+        "crate_cleaned_up_server": "Kist op server opgeruimd",
+        "invalid_player_crate": "Ongeldige speler-ID voor kist openen",
+        "non_existent_crate": "Speler %s probeerde niet-bestaande kist te openen",
+        "already_owned_crate": "Speler %s probeerde reeds bezeten kist te openen",
+        "player_too_far_crate": "Speler %s te ver van kist (afstand: %f)",
+        "player_no_start_crate": "Speler %s probeerde te voltooien zonder te starten",
+        "player_no_ownership": "Speler %s probeerde te voltooien zonder eigendom",
+        "opening_too_quick": "Speler %s opende te snel (tijd: %d, verwacht: %d)",
+        "player_started_opening": "Speler %s begon te openen",
+        "player_completed_opening": "Speler %s voltooide openen",
+        "player_cancelled_opening": "Speler %s annuleerde openen",
+        "crate_server_initialized": "Server kistmodule geïnitialiseerd"
+    },
+    
+    "loot": {
+        "received_items": "%d items ontvangen uit de kist!",
+        "failed_receive_items": "Ontvangen van items uit kist mislukt",
+        "loot_received": "Buit ontvangen:",
+        "loot_item_format": "• %dx %s (%s)",
+        "player_failed_items": "Speler %s had %d mislukte items",
+        "gave_item_player": "%dx %s gegeven aan speler %s (tier: %s)",
+        "failed_give_item": "Niet gelukt om %dx %s te geven aan speler %s",
+        "updated_player_stats": "Statistieken bijgewerkt voor %s: %d kisten geopend, %d items totaal"
+    },
+    
+    "security": {
+        "suspicious_activity": "Verdachte activiteit gedetecteerd: %s (Aantal: %d)",
+        "invalid_player_entity": "Ongeldige spelerentiteit",
+        "player_vehicle_ui": "Speler in voertuig terwijl UI open is",
+        "player_far_crate_active": "Speler te ver van kist maar kist is actief",
+        "player_far_computer": "Speler te ver weg voor computer",
+        "distance_validation_failed": "Afstandsvalidatie mislukt: %f > %f",
+        "contact_admin": "Verdachte activiteit gedetecteerd. Neem contact op met een admin.",
+        "security_log_format": "[BEVEILIGING] Speler %s (%s) - %s - Aantal: %d - Coords: %s",
+        "player_flagged": "Speler %s gemarkeerd vanwege verdachte activiteit: %s",
+        "too_many_suspicious": "Te veel verdachte activiteiten",
+        "player_dropped_security": "[CAYO CRATES] Je bent gemarkeerd voor verdachte activiteit. Neem contact op met een admin.",
+        "suspicious_activity_reported": "Verdachte activiteit gemeld voor speler %s: %s"
+    },
+    
+    "ui": {
+        "usb_injected": "USB-apparaat geplaatst",
+        "usb_ejected": "USB-apparaat verwijderd",
+        "ui_opened": "UI geopend",
+        "ui_closed": "UI gesloten"
+    },
+    
+    "database": {
+        "database_disabled": "Database uitgeschakeld in config",
+        "tables_created": "Databasetabellen aangemaakt",
+        "database_initialized": "Databasemodule geïnitialiseerd"
+    }
+}

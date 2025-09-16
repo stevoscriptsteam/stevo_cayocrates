@@ -1,0 +1,100 @@
+{
+    "crate_opened" : "Kiste vom Team geöffnet!",
+    "crate_dropping_15" : "Kiste fällt in 15 Sekunden!",
+    "crate_dropping_10" : "Kiste fällt in 10 Sekunden!",
+    "crate_dropping_5" : "Kiste fällt in 5 Sekunden!",
+    
+    "computer": {
+        "player_too_far": "Spieler zu weit vom Computer entfernt",
+        "too_many_interactions": "Zu viele Interaktionen, bitte warten",
+        "cannot_access_dead": "Du kannst den Computer nicht im bewusstlosen Zustand benutzen",
+        "need_usb": "Du benötigst ein USB-Gerät, um auf diesen Computer zuzugreifen",
+        "computer_accessed": "Computer wurde von Spieler aufgerufen",
+        "computer_interface_closed": "Computeroberfläche geschlossen",
+        "crate_drop_cooldown": "Kistenabwurf hat Abklingzeit",
+        "access_computer": "[E] - Computer benutzen",
+        "computer_object_created": "Computerobjekt erstellt",
+        "computer_object_deleted": "Computerobjekt gelöscht",
+        "computer_module_initialized": "Computermodul initialisiert",
+        "invalid_player_id": "Ungültige Spieler-ID für Computerzugriff",
+        "player_not_exist": "Spieler existiert nicht",
+        "player_no_usb_attempt": "Spieler %s versuchte Kistenabwurf ohne USB",
+        "player_rate_limited": "Spieler %s wurde für Kistenanfragen rate-begrenzt",
+        "crate_drop_incoming_min_sec": "Kistenabwurf in %d Minuten %d Sekunden",
+        "crate_drop_incoming_min": "Kistenabwurf in %d Minuten",
+        "crate_drop_incoming_sec": "Kistenabwurf in %d Sekunden",
+        "crate_dropping_seconds": "Kiste fällt in %d Sekunden!",
+        "crate_drop_created": "Kistenabwurf erfolgreich erstellt",
+        "computer_data_requested": "Computerdaten von Spieler %s angefordert - Hat USB: %s, Abklingzeit: %s",
+        "crate_drop_available_seconds": "Kistenabwurf verfügbar in %d Sekunden",
+        "failed_remove_usb": "Entfernen des USB-Geräts fehlgeschlagen",
+        "computer_server_initialized": "Computer-Servermodul initialisiert",
+        "player_too_far_computer": "Spieler %s ist zu weit vom Computer entfernt (Entfernung: %f)"
+    },
+    
+    "crate": {
+        "opening_crate": "Kiste wird geöffnet",
+        "crate_opened_success": "Kiste erfolgreich geöffnet!",
+        "crate_opening_cancelled": "Kistenöffnung abgebrochen",
+        "cannot_open_dead": "Du kannst die Kiste nicht im bewusstlosen Zustand öffnen",
+        "too_far_from_crate": "Du bist zu weit von der Kiste entfernt",
+        "press_e_open_crate": "Drücke [E], um die Kiste zu öffnen",
+        "crate_object_created": "Kistenobjekt erstellt",
+        "crate_cleaned_up": "Kiste bereinigt",
+        "crate_drop_created_client": "Kistenabwurf beim Client erstellt",
+        "crate_drop_created_server": "Kistenabwurf beim Server erstellt",
+        "get_away_crate": "Geh von der Kiste weg!",
+        "crate_client_initialized": "Kisten-Clientmodul initialisiert",
+        "crate_cleaned_up_server": "Kiste auf dem Server bereinigt",
+        "invalid_player_crate": "Ungültige Spieler-ID für Kistenöffnung",
+        "non_existent_crate": "Spieler %s versuchte, eine nicht vorhandene Kiste zu öffnen",
+        "already_owned_crate": "Spieler %s versuchte, eine bereits besessene Kiste zu öffnen",
+        "player_too_far_crate": "Spieler %s ist zu weit von der Kiste entfernt (Entfernung: %f)",
+        "player_no_start_crate": "Spieler %s versuchte, die Kistenöffnung abzuschließen, ohne begonnen zu haben",
+        "player_no_ownership": "Spieler %s versuchte, die Kistenöffnung ohne Besitz abzuschließen",
+        "opening_too_quick": "Spieler %s hat die Kiste zu schnell geöffnet (Zeit: %d, erwartet: %d)",
+        "player_started_opening": "Spieler %s hat begonnen, die Kiste zu öffnen",
+        "player_completed_opening": "Spieler %s hat die Kiste geöffnet",
+        "player_cancelled_opening": "Spieler %s hat die Kistenöffnung abgebrochen",
+        "crate_server_initialized": "Kisten-Servermodul initialisiert"
+    },
+    
+    "loot": {
+        "received_items": "%d Gegenstände aus der Kiste erhalten!",
+        "failed_receive_items": "Fehler beim Erhalt der Gegenstände aus der Kiste",
+        "loot_received": "Beute erhalten:",
+        "loot_item_format": "• %dx %s (%s)",
+        "player_failed_items": "Spieler %s hatte %d fehlgeschlagene Gegenstände",
+        "gave_item_player": "%dx %s an Spieler %s gegeben (Stufe: %s)",
+        "failed_give_item": "Fehler beim Geben von %dx %s an Spieler %s",
+        "updated_player_stats": "Statistiken für Spieler %s aktualisiert: %d Kisten geöffnet, %d Gesamtgegenstände"
+    },
+    
+    "security": {
+        "suspicious_activity": "Verdächtige Aktivität erkannt: %s (Anzahl: %d)",
+        "invalid_player_entity": "Ungültige Spielerentität",
+        "player_vehicle_ui": "Spieler im Fahrzeug, während die UI geöffnet ist",
+        "player_far_crate_active": "Spieler zu weit von der Kiste entfernt, aber Kiste ist aktiv",
+        "player_far_computer": "Spieler greift aus zu großer Entfernung auf den Computer zu",
+        "distance_validation_failed": "Abstandsprüfung fehlgeschlagen: %f > %f",
+        "contact_admin": "Verdächtige Aktivität erkannt. Bitte wende dich an einen Administrator.",
+        "security_log_format": "[SICHERHEIT] Spieler %s (%s) - %s - Anzahl: %d - Koordinaten: %s",
+        "player_flagged": "Spieler %s wegen verdächtiger Aktivität markiert: %s",
+        "too_many_suspicious": "Zu viele verdächtige Aktivitäten",
+        "player_dropped_security": "[CAYO CRATES] Du wurdest wegen verdächtiger Aktivität markiert. Kontaktiere einen Administrator.",
+        "suspicious_activity_reported": "Verdächtige Aktivität für Spieler %s gemeldet: %s"
+    },
+    
+    "ui": {
+        "usb_injected": "USB-Gerät eingesteckt",
+        "usb_ejected": "USB-Gerät ausgeworfen",
+        "ui_opened": "UI geöffnet",
+        "ui_closed": "UI geschlossen"
+    },
+    
+    "database": {
+        "database_disabled": "Datenbank in der Konfiguration deaktiviert",
+        "tables_created": "Datenbanktabellen erstellt",
+        "database_initialized": "Datenbankmodul initialisiert"
+    }
+}

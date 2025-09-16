@@ -1,0 +1,100 @@
+{
+    "crate_opened" : "Caisse ouverte par l'équipe !",
+    "crate_dropping_15" : "Caisse dans 15 secondes !",
+    "crate_dropping_10" : "Caisse dans 10 secondes !",
+    "crate_dropping_5" : "Caisse dans 5 secondes !",
+    
+    "computer": {
+        "player_too_far": "Joueur trop éloigné de l'ordinateur",
+        "too_many_interactions": "Trop d'interactions, veuillez patienter",
+        "cannot_access_dead": "Vous ne pouvez pas utiliser l'ordinateur inconscient",
+        "need_usb": "Vous avez besoin d'un périphérique USB pour cet ordinateur",
+        "computer_accessed": "Ordinateur accédé par un joueur",
+        "computer_interface_closed": "Interface ordinateur fermée",
+        "crate_drop_cooldown": "Le largage de caisse est en recharge",
+        "access_computer": "[E] - Accéder à l'ordinateur",
+        "computer_object_created": "Objet ordinateur créé",
+        "computer_object_deleted": "Objet ordinateur supprimé",
+        "computer_module_initialized": "Module ordinateur initialisé",
+        "invalid_player_id": "ID joueur invalide pour l'accès",
+        "player_not_exist": "Le joueur n'existe pas",
+        "player_no_usb_attempt": "Le joueur %s a tenté un largage sans USB",
+        "player_rate_limited": "Le joueur %s a été limité pour ses requêtes",
+        "crate_drop_incoming_min_sec": "Largage dans %d minutes %d secondes",
+        "crate_drop_incoming_min": "Largage dans %d minutes",
+        "crate_drop_incoming_sec": "Largage dans %d secondes",
+        "crate_dropping_seconds": "Caisse dans %d secondes !",
+        "crate_drop_created": "Largage de caisse créé avec succès",
+        "computer_data_requested": "Données demandées par %s - USB : %s, CD : %s",
+        "crate_drop_available_seconds": "Largage disponible dans %d secondes",
+        "failed_remove_usb": "Échec du retrait du périphérique USB",
+        "computer_server_initialized": "Module serveur ordinateur initialisé",
+        "player_too_far_computer": "Le joueur %s est trop loin de l'ordinateur (distance : %f)"
+    },
+    
+    "crate": {
+        "opening_crate": "Ouverture de la caisse",
+        "crate_opened_success": "Caisse ouverte avec succès !",
+        "crate_opening_cancelled": "Ouverture de caisse annulée",
+        "cannot_open_dead": "Vous ne pouvez pas ouvrir la caisse inconscient",
+        "too_far_from_crate": "Vous êtes trop loin de la caisse",
+        "press_e_open_crate": "Appuyez sur [E] pour ouvrir la caisse",
+        "crate_object_created": "Objet caisse créé",
+        "crate_cleaned_up": "Caisse nettoyée",
+        "crate_drop_created_client": "Largage créé côté client",
+        "crate_drop_created_server": "Largage créé côté serveur",
+        "get_away_crate": "Éloignez-vous de la caisse !",
+        "crate_client_initialized": "Module client caisse initialisé",
+        "crate_cleaned_up_server": "Caisse nettoyée côté serveur",
+        "invalid_player_crate": "ID joueur invalide pour l'ouverture",
+        "non_existent_crate": "Le joueur %s a tenté d'ouvrir une caisse inexistante",
+        "already_owned_crate": "Le joueur %s a tenté d'ouvrir une caisse déjà possédée",
+        "player_too_far_crate": "Le joueur %s est trop loin de la caisse (distance : %f)",
+        "player_no_start_crate": "Le joueur %s a tenté de terminer sans commencer",
+        "player_no_ownership": "Le joueur %s a tenté de terminer sans propriété",
+        "opening_too_quick": "Le joueur %s a ouvert trop vite (temps : %d, attendu : %d)",
+        "player_started_opening": "Le joueur %s a commencé à ouvrir",
+        "player_completed_opening": "Le joueur %s a terminé l'ouverture",
+        "player_cancelled_opening": "Le joueur %s a annulé l'ouverture",
+        "crate_server_initialized": "Module serveur caisse initialisé"
+    },
+    
+    "loot": {
+        "received_items": "%d objets reçus de la caisse !",
+        "failed_receive_items": "Échec de réception des objets de la caisse",
+        "loot_received": "Butin reçu :",
+        "loot_item_format": "• %dx %s (%s)",
+        "player_failed_items": "Le joueur %s a eu %d objets échoués",
+        "gave_item_player": "%dx %s donné au joueur %s (palier : %s)",
+        "failed_give_item": "Impossible de donner %dx %s au joueur %s",
+        "updated_player_stats": "Stats mises à jour pour %s : %d caisses, %d objets au total"
+    },
+    
+    "security": {
+        "suspicious_activity": "Activité suspecte détectée : %s (Compte : %d)",
+        "invalid_player_entity": "Entité joueur invalide",
+        "player_vehicle_ui": "Joueur dans un véhicule pendant que l'UI est ouverte",
+        "player_far_crate_active": "Joueur trop loin de la caisse mais caisse active",
+        "player_far_computer": "Joueur trop loin de l'ordinateur",
+        "distance_validation_failed": "Validation de distance échouée : %f > %f",
+        "contact_admin": "Activité suspecte détectée. Contactez un administrateur.",
+        "security_log_format": "[SÉCURITÉ] Joueur %s (%s) - %s - Compte : %d - Coords : %s",
+        "player_flagged": "Joueur %s signalé pour activité suspecte : %s",
+        "too_many_suspicious": "Trop d'activités suspectes",
+        "player_dropped_security": "[CAYO CRATES] Vous avez été signalé pour activité suspecte. Contactez un administrateur.",
+        "suspicious_activity_reported": "Activité suspecte signalée pour le joueur %s : %s"
+    },
+    
+    "ui": {
+        "usb_injected": "Périphérique USB inséré",
+        "usb_ejected": "Périphérique USB éjecté",
+        "ui_opened": "UI ouverte",
+        "ui_closed": "UI fermée"
+    },
+    
+    "database": {
+        "database_disabled": "Base de données désactivée dans la config",
+        "tables_created": "Tables de base de données créées",
+        "database_initialized": "Module base de données initialisé"
+    }
+}

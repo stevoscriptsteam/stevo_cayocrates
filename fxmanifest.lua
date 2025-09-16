@@ -1,26 +1,23 @@
 fx_version 'cerulean'
 game 'gta5'
 
-
-author 'StevoScripts | steve'
-description 'Cayo Crate Resource'
-version '1.0.0'
+author 'SSnowly & Steve'
+description 'Cayo Crate Resource - Refactored'
+version '2.0.0'
 
 ui_page "web/ui.html"
 
 shared_scripts {
-  'config.lua',
-  '@ox_lib/init.lua'
+  '@ox_lib/init.lua',
 }
 
 client_scripts {
-  'resource/client.lua',
-
+  'client.lua'
 }
 
 server_scripts {
   '@oxmysql/lib/MySQL.lua',
-	'resource/server.lua'
+  'server.lua'
 }
 
 files {
@@ -29,14 +26,25 @@ files {
   "web/style.css",
   "web/laptop.jpg",
   'web/sound.wav',
-  'locales/*.json'
+  'locales/*.json',
+
+  -- shared
+  'shared/config.lua',
+  'shared/state.lua',
+
+  -- client
+  'modules/**/client*.lua',
 }
 
+-- initiate locales cuz.. why not?
+ox_libs {
+  'locale'
+}
 
 dependencies {
   'ox_lib',
-  'oxmysql',
-  'stevo_lib'
+  'ox_inventory',
+  'oxmysql'
 }
 
 lua54 'yes'

@@ -1,0 +1,100 @@
+{
+    "crate_opened" : "¡Caja abierta por el equipo!",
+    "crate_dropping_15" : "¡Caja cayendo en 15 segundos!",
+    "crate_dropping_10" : "¡Caja cayendo en 10 segundos!",
+    "crate_dropping_5" : "¡Caja cayendo en 5 segundos!",
+    
+    "computer": {
+        "player_too_far": "Jugador demasiado lejos del ordenador",
+        "too_many_interactions": "Demasiadas interacciones, por favor espera",
+        "cannot_access_dead": "No puedes usar el ordenador estando inconsciente",
+        "need_usb": "Necesitas un dispositivo USB para usar este ordenador",
+        "computer_accessed": "Ordenador accedido por el jugador",
+        "computer_interface_closed": "Interfaz del ordenador cerrada",
+        "crate_drop_cooldown": "El lanzamiento de la caja está en enfriamiento",
+        "access_computer": "[E] - Usar ordenador",
+        "computer_object_created": "Objeto ordenador creado",
+        "computer_object_deleted": "Objeto ordenador eliminado",
+        "computer_module_initialized": "Módulo de ordenador inicializado",
+        "invalid_player_id": "ID de jugador inválida para acceso al ordenador",
+        "player_not_exist": "El jugador no existe",
+        "player_no_usb_attempt": "El jugador %s intentó lanzar caja sin USB",
+        "player_rate_limited": "El jugador %s fue limitado por demasiadas solicitudes",
+        "crate_drop_incoming_min_sec": "Lanzamiento en %d minutos %d segundos",
+        "crate_drop_incoming_min": "Lanzamiento en %d minutos",
+        "crate_drop_incoming_sec": "Lanzamiento en %d segundos",
+        "crate_dropping_seconds": "¡Caja cayendo en %d segundos!",
+        "crate_drop_created": "Lanzamiento de caja creado correctamente",
+        "computer_data_requested": "Datos solicitados por %s - USB: %s, CD: %s",
+        "crate_drop_available_seconds": "Lanzamiento disponible en %d segundos",
+        "failed_remove_usb": "No se pudo retirar el dispositivo USB",
+        "computer_server_initialized": "Módulo de servidor del ordenador inicializado",
+        "player_too_far_computer": "Jugador %s demasiado lejos del ordenador (distancia: %f)"
+    },
+    
+    "crate": {
+        "opening_crate": "Abriendo caja",
+        "crate_opened_success": "¡Caja abierta con éxito!",
+        "crate_opening_cancelled": "Apertura de caja cancelada",
+        "cannot_open_dead": "No puedes abrir la caja estando inconsciente",
+        "too_far_from_crate": "Estás demasiado lejos de la caja",
+        "press_e_open_crate": "Pulsa [E] para abrir la caja",
+        "crate_object_created": "Objeto caja creado",
+        "crate_cleaned_up": "Caja limpiada",
+        "crate_drop_created_client": "Lanzamiento creado en el cliente",
+        "crate_drop_created_server": "Lanzamiento creado en el servidor",
+        "get_away_crate": "¡Aléjate de la caja!",
+        "crate_client_initialized": "Módulo de caja del cliente inicializado",
+        "crate_cleaned_up_server": "Caja limpiada en el servidor",
+        "invalid_player_crate": "ID de jugador inválida para abrir la caja",
+        "non_existent_crate": "El jugador %s intentó abrir una caja inexistente",
+        "already_owned_crate": "El jugador %s intentó abrir una caja ya reclamada",
+        "player_too_far_crate": "El jugador %s está demasiado lejos de la caja (distancia: %f)",
+        "player_no_start_crate": "El jugador %s intentó completar sin empezar",
+        "player_no_ownership": "El jugador %s intentó completar sin propiedad",
+        "opening_too_quick": "El jugador %s abrió demasiado rápido (tiempo: %d, esperado: %d)",
+        "player_started_opening": "El jugador %s comenzó a abrir",
+        "player_completed_opening": "El jugador %s completó la apertura",
+        "player_cancelled_opening": "El jugador %s canceló la apertura",
+        "crate_server_initialized": "Módulo de caja del servidor inicializado"
+    },
+    
+    "loot": {
+        "received_items": "¡%d objetos recibidos de la caja!",
+        "failed_receive_items": "No se pudieron recibir objetos de la caja",
+        "loot_received": "Botín recibido:",
+        "loot_item_format": "• %dx %s (%s)",
+        "player_failed_items": "El jugador %s tuvo %d objetos fallidos",
+        "gave_item_player": "Se dio %dx %s al jugador %s (nivel: %s)",
+        "failed_give_item": "No se pudo dar %dx %s al jugador %s",
+        "updated_player_stats": "Estadísticas actualizadas para %s: %d cajas abiertas, %d objetos en total"
+    },
+    
+    "security": {
+        "suspicious_activity": "Actividad sospechosa detectada: %s (Conteo: %d)",
+        "invalid_player_entity": "Entidad de jugador inválida",
+        "player_vehicle_ui": "Jugador en vehículo mientras la UI está abierta",
+        "player_far_crate_active": "Jugador demasiado lejos de la caja pero la caja está activa",
+        "player_far_computer": "Jugador accediendo al ordenador desde demasiado lejos",
+        "distance_validation_failed": "Validación de distancia fallida: %f > %f",
+        "contact_admin": "Actividad sospechosa detectada. Contacta con un administrador.",
+        "security_log_format": "[SEGURIDAD] Jugador %s (%s) - %s - Conteo: %d - Coords: %s",
+        "player_flagged": "Jugador %s marcado por actividad sospechosa: %s",
+        "too_many_suspicious": "Demasiadas actividades sospechosas",
+        "player_dropped_security": "[CAYO CRATES] Has sido marcado por actividad sospechosa. Contacta con un administrador.",
+        "suspicious_activity_reported": "Actividad sospechosa reportada para el jugador %s: %s"
+    },
+    
+    "ui": {
+        "usb_injected": "Dispositivo USB insertado",
+        "usb_ejected": "Dispositivo USB expulsado",
+        "ui_opened": "UI abierta",
+        "ui_closed": "UI cerrada"
+    },
+    
+    "database": {
+        "database_disabled": "Base de datos deshabilitada en la configuración",
+        "tables_created": "Tablas de base de datos creadas",
+        "database_initialized": "Módulo de base de datos inicializado"
+    }
+}

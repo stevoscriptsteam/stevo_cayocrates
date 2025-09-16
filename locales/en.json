@@ -2,7 +2,99 @@
     "crate_opened" : "Crate Opened by team!",
     "crate_dropping_15" : "Crate Dropping in 15 seconds!",
     "crate_dropping_10" : "Crate Dropping in 10 seconds!",
-    "crate_dropping_5" : "Crate Dropping in 5 seconds!"
-
-
+    "crate_dropping_5" : "Crate Dropping in 5 seconds!",
+    
+    "computer": {
+        "player_too_far": "Player too far from computer",
+        "too_many_interactions": "Too many interactions, please wait",
+        "cannot_access_dead": "You cannot access the computer while dead",
+        "need_usb": "You need a USB device to access this computer",
+        "computer_accessed": "Computer accessed by player",
+        "computer_interface_closed": "Computer interface closed",
+        "crate_drop_cooldown": "Crate drop is on cooldown",
+        "access_computer": "**[E]** Access Computer",
+        "computer_object_created": "Computer object created",
+        "computer_object_deleted": "Computer object deleted",
+        "computer_module_initialized": "Computer module initialized",
+        "invalid_player_id": "Invalid player ID for computer access",
+        "player_not_exist": "Player does not exist",
+        "player_no_usb_attempt": "Player %s attempted crate drop without USB",
+        "player_rate_limited": "Player %s rate limited for crate requests",
+        "crate_drop_incoming_min_sec": "Crate drop incoming in %d minutes %d seconds",
+        "crate_drop_incoming_min": "Crate drop incoming in %d minutes",
+        "crate_drop_incoming_sec": "Crate drop incoming in %d seconds",
+        "crate_dropping_seconds": "Crate dropping in %d seconds!",
+        "crate_drop_created": "Crate drop created successfully",
+        "computer_data_requested": "Computer data requested by player %s - Has USB: %s, Cooldown: %s",
+        "crate_drop_available_seconds": "Crate drop available in %d seconds",
+        "failed_remove_usb": "Failed to remove USB device",
+        "computer_server_initialized": "Computer server module initialized",
+        "player_too_far_computer": "Player %s too far from computer (distance: %f)"
+    },
+    
+    "crate": {
+        "opening_crate": "Opening Crate",
+        "crate_opened_success": "Crate opened successfully!",
+        "crate_opening_cancelled": "Crate opening cancelled",
+        "cannot_open_dead": "You cannot open the crate while dead",
+        "too_far_from_crate": "You are too far from the crate",
+        "press_e_open_crate": "Press [E] to open crate",
+        "crate_object_created": "Crate object created",
+        "crate_cleaned_up": "Crate cleaned up",
+        "crate_drop_created_client": "Crate drop created on client",
+        "crate_drop_created_server": "Crate drop created on server",
+        "get_away_crate": "Get away from the crate!",
+        "crate_client_initialized": "Crate client module initialized",
+        "crate_cleaned_up_server": "Crate cleaned up on server",
+        "invalid_player_crate": "Invalid player ID for crate opening",
+        "non_existent_crate": "Player %s attempted to open non-existent crate",
+        "already_owned_crate": "Player %s attempted to open already owned crate",
+        "player_too_far_crate": "Player %s too far from crate (distance: %f)",
+        "player_no_start_crate": "Player %s attempted to complete crate opening without starting",
+        "player_no_ownership": "Player %s attempted to complete crate opening without ownership",
+        "opening_too_quick": "Player %s completed crate opening too quickly (time: %d, expected: %d)",
+        "player_started_opening": "Player %s started opening crate",
+        "player_completed_opening": "Player %s completed crate opening",
+        "player_cancelled_opening": "Player %s cancelled crate opening",
+        "crate_server_initialized": "Crate server module initialized"
+    },
+    
+    "loot": {
+        "received_items": "Received %d items from crate!",
+        "failed_receive_items": "Failed to receive items from crate",
+        "loot_received": "Loot received:",
+        "loot_item_format": "• %dx %s (%s)",
+        "player_failed_items": "Player %s had %d failed items",
+        "gave_item_player": "Gave %dx %s to player %s (tier: %s)",
+        "failed_give_item": "Failed to give %dx %s to player %s",
+        "updated_player_stats": "Updated stats for player %s: %d crates opened, %d total items"
+    },
+    
+    "security": {
+        "suspicious_activity": "Suspicious activity detected: %s (Count: %d)",
+        "invalid_player_entity": "Invalid player entity",
+        "player_vehicle_ui": "Player in vehicle while UI is open",
+        "player_far_crate_active": "Player too far from crate but crate is active",
+        "player_far_computer": "Player accessing computer from too far away",
+        "distance_validation_failed": "Distance validation failed: %f > %f",
+        "contact_admin": "Suspicious activity detected. Please contact an administrator.",
+        "security_log_format": "[SECURITY] Player %s (%s) - %s - Count: %d - Coords: %s",
+        "player_flagged": "Player %s flagged for suspicious activity: %s",
+        "too_many_suspicious": "Too many suspicious activities",
+        "player_dropped_security": "[CAYO CRATES] You have been flagged for suspicious activity. Contact an administrator.",
+        "suspicious_activity_reported": "Suspicious activity reported for player %s: %s"
+    },
+    
+    "ui": {
+        "usb_injected": "USB device injected",
+        "usb_ejected": "USB device ejected",
+        "ui_opened": "UI opened",
+        "ui_closed": "UI closed"
+    },
+    
+    "database": {
+        "database_disabled": "Database disabled in config",
+        "tables_created": "Database tables created",
+        "database_initialized": "Database module initialized"
+    }
 }
