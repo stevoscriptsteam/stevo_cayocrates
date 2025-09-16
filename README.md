@@ -23,8 +23,6 @@ Preview: [Click Here](https://youtu.be/ww3lDDS7xIU)
 <br>
 Discord: [Click Here](https://discord.gg/stevoscripts)
 <br>
-**Check our our paid releases!**: [Click Here](https://store.stevoscripts.com/)
+Store: [Click Here](https://stevoscripts.com)
 
-## Support us by checking out our Featured Paid Resource 
-[![FORUM](https://github.com/user-attachments/assets/64ea1a30-f5f3-40bb-9ba0-7e309ff67d90)](https://store.stevoscripts.com/package/6448032)
 
