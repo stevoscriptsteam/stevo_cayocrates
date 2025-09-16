@@ -92,7 +92,7 @@ local function startCrateDrop(player)
 
 
     CreateThread(function()
-        -- Wait(config.crates.drop.wait_time)
+        Wait(config.crates.drop.wait_time)
 
 
         local random_location = config.crates.locations[math.random(1, #config.crates.locations)]
@@ -147,9 +147,9 @@ end)
 RegisterNetEvent('stevo_cayocrates:requestCrateDrop', function()
     local player = source
 
-    -- if not validateCrateDropRequest(player) then
-    --     return
-    -- end
+    if not validateCrateDropRequest(player) then
+        return
+    end
 
 
     if ServerState.crate_cooldown then
